@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  screen.lockOrientation('portrait');
+  // screen.lockOrientation('portrait');
 
 
   $('audio').data('bpm','126');

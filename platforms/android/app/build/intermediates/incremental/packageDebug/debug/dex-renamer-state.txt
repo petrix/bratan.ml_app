@@ -1,4 +1,4 @@
-#Sun Oct 07 03:17:01 EEST 2018
+#Sun Oct 07 03:40:17 EEST 2018
 base.0=/Users/p3xx/Documents/GitHub/bratan.ml_app/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex

@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun Oct 07 02:51:55 EEST 2018
+#Sun Oct 07 03:33:52 EEST 2018
 60.set=ASSET
 52.set=ASSET
 53.base=/Users/p3xx/Documents/GitHub/bratan.ml_app/platforms/android/app/build/intermediates/assets/release

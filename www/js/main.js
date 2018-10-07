@@ -5,7 +5,7 @@ $(document).ready(function(){
   $('audio').data('bpm','126');
   $('.spinner-wrap').click(function(){
     var $this =$(this),audio = $this.siblings('audio')[0],bpm = $this.siblings('audio').data('bpm');
-    console.log(bpm);
+    // console.log(bpm);
     if(audio.paused){
       audio.play();
       $this.addClass('playing');

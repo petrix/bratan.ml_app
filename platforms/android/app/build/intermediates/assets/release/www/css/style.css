@@ -26,12 +26,12 @@
   src: url('../fonts/bender-all/webfonts/37BAF8_3_0.eot?#iefix') format('embedded-opentype'),
   url('../fonts/bender-all/webfonts/37BAF8_3_0.woff2') format('woff2'),
   url('../fonts/bender-all/webfonts/37BAF8_3_0.woff') format('woff'),
-  url('../fonts/bender-all/webfonts/37BAF8_3_0.ttf') format('truetype');}
+  url('../fonts/bender-all/webfonts/37BAF8_3_0.ttf') format('truetype');
+}
+
 * {
   box-sizing: border-box;
-  &:active, &:hover, &:focus {
-    outline: 0;
-  }
+  
 }
 
 html {
@@ -60,52 +60,57 @@ width: 100%;
   	background-color: #555;
   	overflow: hidden;
   	margin: 0 auto;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	/* display: flex; */
+	/* justify-content: center; */
+	/* align-items: center; */
 font-family: 'Bender-Bold';
 font-weight: normal;
-padding: 10px;
+/* padding: 10px; */
+background: url('../img/bratan_bg1.jpg') no-repeat 100% 100%;
 }
 
 span {
-/* position: absolute; */
+position: absolute;
   margin: 0;
-  padding: 15px 0 15px 0;
+  /* padding: 15px 0 15px 0; */
   color: #f6f6c4;
 font-size: 32px;
-font-weight: bold;
+font-family: 'Bender-Bold';
+font-weight: normal;
+text-align: center;
 background-color: rgba(0,0,0,0.5);
 z-index: 2;
 }
 
+.ui-grid-solo
+{bottom: 0;
+height: 100%;
+position: relative;
+/* margin-top: 15px; */
+}
 
 body > div {
-  position: relative;
-/*   z-index: 1; */
-/* margin: 10px; */
   width: 100%;
   height: 100%;
-  background-color: #d73737;
-
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background: url('../img/bratan_bg1.jpg') no-repeat 100% 100%;
+  padding: 10px;
+  /* background-color: #d73737; */
+    
 }
 
 
 
 .spinner-wrap {
   display: block;
-  position: relative;
+  position: absolute;
+  top: 50%;
+     transform: translateY(-50%);
   left: 50%;
-  top: 15px;
+  transform: translateX(-50%);
+  /* top: 15px; */
   width: 300px;
   height: 300px;
-margin-bottom: 70px;
-  margin-left: -150px;
+/* margin-bottom: 70px; */
+  /* margin-left: -50%; */
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -127,7 +132,7 @@ margin-bottom: 70px;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   border-radius: 50%;
-  background: url("../img/spinner-outer.png") center center no-repeat #333;
+  background: url("../img/spinner-outer.png") center center no-repeat #3336;
 background-size: 300px 300px;
 }
 .playing .spinner-outer {
@@ -181,8 +186,11 @@ background-size: 300px 300px;
     transform: rotate(360deg);
   }
 }
-@media only screen and (min-width: 560px) {
+@media only screen and (min-width: 540px) {
+  .ui-bar{
+    position: absolute;
+  }
   .spinner-wrap{
-    margin-top: -127px;
+    /* margin-left: -5%; */
   }
 }

@@ -3,13 +3,13 @@
 
     <item
         is-multidex="false"
-        jar="D:\phoneGap\bratan.ml_app\platforms\android\app\build\intermediates\transforms\desugar\release\0.jar"
+        jar="/Users/p3xx/Documents/GitHub/bratan.ml_app/platforms/android/app/build/intermediates/transforms/desugar/release/0.jar"
         jumboMode="false"
         min-sdk-version="19"
         optimize="true"
-        revision="28.0.3"
+        revision="28.0.2"
         sha1="fdadb7b61bb98e4ec37ec5f5643bb6b8f78b5188">
-        <dex dex="D:\phoneGap\bratan.ml_app\platforms\android\app\build\intermediates\transforms\preDex\release\1.jar" />
+        <dex dex="/Users/p3xx/Documents/GitHub/bratan.ml_app/platforms/android/app/build/intermediates/transforms/preDex/release/1.jar" />
     </item>
 
 </items>

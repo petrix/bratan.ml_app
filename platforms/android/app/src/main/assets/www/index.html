@@ -28,7 +28,17 @@
       <script src="js/screenorientation.js"></script>
       <script  src="js/main.js"></script>
 <script type="text/javascript">
-screen.orientation.lock('portrait-primary');
+document.addEventListener("deviceready", onDeviceReady, false);
+    function onDeviceReady()
+    {
+        screen.lockOrientation('portrait-primary');
+    }
+
+
+// screen.orientation.lock('portrait-primary');
+// screen.orientation.onchange = function(){
+//   screen.orientation.lock('portrait-primary');
+// };
 </script>
 <script type="application/ld+json">
 {

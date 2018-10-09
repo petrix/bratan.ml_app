@@ -17,8 +17,8 @@ var yLength = ww + x.length * (parseFloat($("#x").css("font-size"))) / 1.8;
 // console.log(y);
 // console.log(w);
 
-    ww=ww-5;
-    www=www-5;
+    ww=ww-2;
+    www=www-2;
 if(yLength > 0){
 console.log(yLength);
   $('#x').css('transform', 'translateX('   + www  + 'px)');
@@ -34,6 +34,6 @@ console.log(yLength);
   }
   
   clearInterval(intId);
-  intId = setInterval(intervalId, 50);
+  intId = setInterval(intervalId, 20);
 
 });

@@ -168,8 +168,8 @@ position: absolute;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   border-radius: 50%;
-  background: url("../img/spinner-outer.png") center center no-repeat rgba(0,0,0,0.5);
-background-size: 240px 240px;
+  background: url("../img/plast_logo.png") center center no-repeat rgba(0,0,0,0.5);
+background-size: 260px 260px;
 -webkit-box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.75), 0px 0px 20px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.75), 0px 0px 20px 0px rgba(0,0,0,0.75);
 box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.75), 0px 0px 20px 0px rgba(0,0,0,0.75);
@@ -180,20 +180,22 @@ box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.75), 0px 0px 20px 0px rgba(0,0,0
 
 .spinner-center {
   position: absolute;
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   top: 50%;
   left: 50%;
-  margin: -100px;
+  margin: -125px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   border-radius: 50%;
-  background: url("../img/spinner-center.png") center center no-repeat;
+  /* background: url("../img/kontur.png") center center no-repeat; */
+  background-size: 295px 295px;
+  opacity: 0.5;
 }
 .playing .spinner-center {
-  animation: spin-ccw 15s linear 0s infinite;
+  animation: spin-cw 20s linear 0s infinite;
 }
 
 .play-sprite {
@@ -203,7 +205,7 @@ box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.75), 0px 0px 20px 0px rgba(0,0,0
   width: 70px;
   height: 70px;
   margin: -35px;
-  background: url("../img/play-sprite.png") no-repeat;
+  /* background: url("../img/play-sprite.png") no-repeat; */
 }
 .playing .play-sprite {
   background-position: 0 -70px;
@@ -211,18 +213,18 @@ box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.75), 0px 0px 20px 0px rgba(0,0,0
 
 @keyframes spin-cw {
   from {
-    transform: rotate(360deg);
+    transform: rotate(0deg);
   }
   to {
-    transform: rotate(0deg);
+    transform: rotate(360deg);
   }
 }
 @keyframes spin-ccw {
   from {
-    transform: rotate(0deg);
+    transform: rotate(360deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(0deg);
   }
 }
 @media only screen and (max-width: 440px) {

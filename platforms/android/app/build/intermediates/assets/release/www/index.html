@@ -15,25 +15,22 @@
 <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
 <!-- <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" /> -->
 <!-- <meta name="viewport" content="user-scalable=1.0,initial-scale=1.0,minimum-scale=0.75,maximum-scale=1.0"> -->
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/style.css">
 
 <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="format-detection" content="telephone=yes">
- <link rel="stylesheet" type="text/css" href="fonts/bender-all/bender.css"> 
-       <link rel="stylesheet" href="js/jquery.mobile/jquery.mobile-1.4.5.min.css">
-            <link rel="stylesheet" href="css/style.css"> 
+ <!-- <link rel="stylesheet" type="text/css" href="fonts/bender-all/bender.css">  -->
+             
       <script  src="js/jquery-3.3.1.min.js"></script>
-      <script src="js/jquery.mobile/jquery.mobile-1.4.5.min.js"></script>
-     
-
-      <script type="text/javascript" src="cordova.js"></script>
+      <!-- <script type="text/javascript" src="cordova.js"></script> -->
       <script  src="js/main.js"></script>
-<!-- <link rel="stylesheet" href="fonts/style.css"> -->
 
 <script type="application/ld+json">
 {
   "@context": "http://schema.org",
   "@type": "Organization",
-  "url": "http://www.bratan.ooo",
+  "url": "http://www.bratan.tk",
   "name": "RADIO BRATAN inc.",
   "contactPoint": {
     "@type": "ContactPoint",
@@ -43,13 +40,6 @@
 }
 </script>
 
-<script>
-    document.addEventListener("deviceready", onDeviceReady, false);
-    function onDeviceReady()
-    {
-        screen.lockOrientation('landscape');
-    }
-</script>
 
 <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
@@ -60,16 +50,11 @@
 </head>
 
 <body>
-  <div is="page" id="home" data-role="page" data-theme="b">
-    <div class="ui-grid-solo">
 
-      <span data-shoutcast-value="songtitle" class="ui-bar ui-corner-all">RADIO BRATAN</span>
-    <!-- <div is="content" role="main" class="ui-content"> -->
-  <!-- <div class="main"> -->
-<!--   <h1>Animated Music Player</h1> -->
- 
-
-<!--   <h2>This is For Learning</h2> -->
+    <div class="main">
+        <div class="songmodule">
+      <p data-shoutcast-value="songtitle" id="x"  class="songtitle">RADIO BRATAN</p>
+        </div>
   <div class="spinner-wrap">
     <div class="spinner-outer"></div>
     <div class="spinner-center"></div>
@@ -78,16 +63,14 @@
   
   <audio loop='loop'>
     <source src='http://radiobratan.tk:8000/radio_bratan_192.mp3' type='audio/mp3' />
-</audio></div>
-<!-- </div> -->
+</audio>
   </div> 
-<script src="js/jquery.shoutcast.easy.min.js?host=radiobratan.tk&port=8000"></script>
+<script src="js/jquery.marquee.min.js"></script>
+<script src="js/marquee.js"></script>
 
+  <script src="js/jquery.shoutcast.easy.min.js?host=radiobratan.tk&port=8000"></script>
 
-
-
-
-
+ 
 </body>
 
 </html>

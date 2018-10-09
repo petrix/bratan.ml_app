@@ -1,7 +1,4 @@
 $(document).ready(function(){
-  // screen.lockOrientation('portrait');
-
-
   $('audio').data('bpm','126');
   $('.spinner-wrap').click(function(){
     var $this =$(this),audio = $this.siblings('audio')[0],bpm = $this.siblings('audio').data('bpm');

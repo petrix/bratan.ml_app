@@ -2,38 +2,34 @@ $(document).ready(function(){
 
 
 var intId;
-var z = 0;
-var w = $( window ).width();
+// var z = 0;
+// var w = $( window ).width();
+var w = $('.songmodule').width();
     var ww = w;
     var www = w;
   var intervalId = function(){
-
-    z++;
-
+    // z++;
 var x = $('#x').html();
-var y = x.length;
+// var y = x.length;
 var yLength = ww + x.length * (parseFloat($("#x").css("font-size"))) / 1.8;
-// console.log(parseFloat($("#x").css("font-size")));
-// console.log(y);
-// console.log(w);
-
-    ww=ww-5;
-    www=www-5;
+  $.getJSON('http://radiobratan.tk:88/api/nowplaying', function(data){
+    // console.log(data[0].now_playing);
+    $('#x').html(data[0].now_playing.song.text);
+    $('.songstatus').css('width',(data[0].now_playing.elapsed/data[0].now_playing.duration)*100+'%');
+  });
+    ww=ww-2;
+    www=www-2;
 if(yLength > 0){
-console.log(yLength);
+// console.log(yLength);
   $('#x').css('transform', 'translateX('   + www  + 'px)');
   } else {
-    // console.log(www)
-    // clearInterval(intId);
     z = 0;
     www = w;
     ww = w;
-    // yLength = ww + x.length * 20;
-    // intId = setInterval(intervalId, 50);
   }
   }
-  
+
   clearInterval(intId);
-  intId = setInterval(intervalId, 50);
+  intId = setInterval(intervalId, 30);
 
 });

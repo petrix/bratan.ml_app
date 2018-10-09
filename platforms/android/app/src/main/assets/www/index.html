@@ -23,9 +23,13 @@
  <!-- <link rel="stylesheet" type="text/css" href="fonts/bender-all/bender.css">  -->
              
       <script  src="js/jquery-3.3.1.min.js"></script>
-      <!-- <script type="text/javascript" src="cordova.js"></script> -->
+      
+      <script type="text/javascript" src="cordova.js"></script>
+      <script src="js/screenorientation.js"></script>
       <script  src="js/main.js"></script>
-
+<script type="text/javascript">
+screen.orientation.lock('portrait-primary');
+</script>
 <script type="application/ld+json">
 {
   "@context": "http://schema.org",
@@ -53,8 +57,12 @@
 
     <div class="main">
         <div class="songmodule">
-      <p data-shoutcast-value="songtitle" id="x"  class="songtitle">RADIO BRATAN</p>
+                <p data-shoutcast-value="songtitle" id="x"  class="songtitle">RADIO BRATAN</p>
+
+            <div class="songstatus">
+
         </div>
+      </div>
   <div class="spinner-wrap">
     <div class="spinner-outer"></div>
     <div class="spinner-center"></div>
@@ -65,10 +73,8 @@
     <source src='http://radiobratan.tk:8000/radio_bratan_192.mp3' type='audio/mp3' />
 </audio>
   </div> 
-<script src="js/jquery.marquee.min.js"></script>
 <script src="js/marquee.js"></script>
 
-  <script src="js/jquery.shoutcast.easy.min.js?host=radiobratan.tk&port=8000"></script>
 
  
 </body>

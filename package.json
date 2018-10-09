@@ -20,6 +20,8 @@
             "cordova-plugin-whitelist": {},
             "cordova-plugin-screen-orientation": {}
         },
-        "platforms": []
+        "platforms": [
+            "android"
+        ]
     }
 }

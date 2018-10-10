@@ -29,14 +29,10 @@ var app = {
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
         // screen.orientation.lock('portrait-primary');
-        if(screen.lockOrientation) { 
-
-            screen.lockOrientation('portrait'); 
-        
+        if(screen.orientation.type) { 
+                screen.orientation.lock('portrait'); 
         } else { 
-        
-            screen.orientation.lock('portrait'); 
-        
+            screen.lockOrientation('portrait'); 
         } 
     },
 

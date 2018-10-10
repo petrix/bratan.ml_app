@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <title>RADIO BRATAN</title>
-<!--meta name="robots" content="noindex" /-->
 <meta name="description" content="RADIO BRATAN" />
 <meta name="keywords" content="RADIO BRATAN, hip-hop, rap, радио братан, радио, братан" />
 <meta name="author" content=".p3xx" />
@@ -13,13 +12,11 @@
 <meta name="application-name" content="RADIO BRATAN">
 <meta name="theme-color" content="#ffffff">
 <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-<!-- <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" /> -->
-<!-- <meta name="viewport" content="user-scalable=1.0,initial-scale=1.0,minimum-scale=0.75,maximum-scale=1.0"> -->
 <link rel="stylesheet" href="css/index.css">
 <link rel="stylesheet" href="css/style.css">
 
 <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="format-detection" content="telephone=yes">
+<meta name="format-detection" content="telephone=yes">
  <!-- <link rel="stylesheet" type="text/css" href="fonts/bender-all/bender.css">  -->
              
       <script  src="js/jquery-3.3.1.min.js"></script>
@@ -31,14 +28,9 @@
 document.addEventListener("deviceready", onDeviceReady, false);
     function onDeviceReady()
     {
-        screen.lockOrientation('portrait-primary');
+        screen.orientation.lock('portrait');
     }
 
-
-// screen.orientation.lock('portrait-primary');
-// screen.orientation.onchange = function(){
-//   screen.orientation.lock('portrait-primary');
-// };
 </script>
 <script type="application/ld+json">
 {
@@ -67,11 +59,10 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
     <div class="main">
         <div class="songmodule">
+          
                 <p data-shoutcast-value="songtitle" id="x"  class="songtitle">RADIO BRATAN</p>
 
-            <div class="songstatus">
-
-        </div>
+            <div class="songstatus"></div>
       </div>
   <div class="spinner-wrap">
     <div class="spinner-outer"></div>
@@ -84,6 +75,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
 </audio>
   </div> 
 <script src="js/marquee.js"></script>
+<script src="js/status.js"></script>
 
 
  

@@ -114,7 +114,7 @@ box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.75), 0px 0px 20px 0px rgba(0,0,0
 .songtitle{
   text-align: left;
   margin: 0 auto;
-color: #f6f6c4;
+color: #fff;
 font-size: 30px;
 line-height: 120%;
 font-family: 'Bender-Bold';
@@ -123,13 +123,15 @@ white-space: nowrap;
 transform: translateX(1400px);
 /* animation: scroll-left 15s linear infinite; */
 position: absolute;
+transition: transform linear 100ms;
+
 /* transition: all 50ms; */
 }
 .songstatus{
-  width: 50%;
+  width: 0%;
   height: 100%;
-  background-color: rgba(100, 0, 0, 0.5);
-/* transition: all 50ms; */
+  background-color: rgba(100, 0, 0, 0.9);
+transition: all 500ms;
 
 }
 .spinner-wrap {

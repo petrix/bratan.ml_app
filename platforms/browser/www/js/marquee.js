@@ -1,35 +1,33 @@
 $(document).ready(function(){
+    var intId;
+    var w = $('.songmodule').width();
+    var ww = w+00;
+    
+var intervalId = function(){
+  var x = $('.songtitle').html();
+  var yLength = ww + x.length * (parseFloat($('.songtitle').css('font-size'))) / 1.7;
+      
+    
+        if(yLength > 0){
+          if(ww < w){
+            $('.songtitle').css('color', '#fff');
+            
+          }
+          $('.songtitle').css('transform', 'translateX('   + ww  + 'px)');
+          $('.songtitle-back').css('transform', 'translate(' + ww  + 'px, -120px)');
+          } else {
+            $('.songtitle').css('color', 'transparent');
+            $.getJSON('http://radiobratan.tk:88/api/nowplaying', function(data){
+                    $('.songtitle').html(data[0].now_playing.song.text);
+                    // $('.songtitle-back').html(data[0].now_playing.song.text);
+                    
+                  });
+          ww = w+80;
+        }
+        ww-=80;
 
-
-var intId;
-// var z = 0;
-// var w = $( window ).width();
-var w = $('.songmodule').width();
-    var ww = w;
-    var www = w;
-  var intervalId = function(){
-    // z++;
-var x = $('#x').html();
-// var y = x.length;
-var yLength = ww + x.length * (parseFloat($("#x").css("font-size"))) / 1.8;
-  $.getJSON('http://radiobratan.tk:88/api/nowplaying', function(data){
-    // console.log(data[0].now_playing);
-    $('#x').html(data[0].now_playing.song.text);
-    $('.songstatus').css('width',(data[0].now_playing.elapsed/data[0].now_playing.duration)*100+'%');
-  });
-    ww=ww-2;
-    www=www-2;
-if(yLength > 0){
-// console.log(yLength);
-  $('#x').css('transform', 'translateX('   + www  + 'px)');
-  } else {
-    z = 0;
-    www = w;
-    ww = w;
   }
-  }
-
   clearInterval(intId);
-  intId = setInterval(intervalId, 30);
+  intId = setInterval(intervalId, 1000);
 
 });

@@ -8,8 +8,8 @@ $.getJSON('http://radiobratan.tk:88/api/nowplaying', function(data){
             });
           
   }
-$('.songtitle').css('transform', 'translateX('   + w + 'px)');
+// $('.songtitle').css('transform', 'translateX('   + w + 'px)');
   clearInterval(intId);
-  intId = setInterval(intervalId, 3000);
+  intId = setInterval(intervalId, 5000);
 
 });

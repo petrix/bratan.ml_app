@@ -23,7 +23,7 @@
       
       <script type="text/javascript" src="cordova.js"></script>
       <script src="js/screenorientation.js"></script>
-      <script  src="js/main.js"></script>
+      <script  src="js/audio.js"></script>
 <script type="text/javascript">
 document.addEventListener("deviceready", onDeviceReady, false);
     function onDeviceReady()
@@ -60,17 +60,18 @@ document.addEventListener("deviceready", onDeviceReady, false);
     <div class="main">
         <div class="songmodule">
           
-                <p data-shoutcast-value="songtitle" id="x"  class="songtitle">RADIO BRATAN</p>
-
-            <div class="songstatus"></div>
+                
+          
+            <div class="songstatus">
+              <span data-shoutcast-value="songtitle" class="songtitle">RADIO BRATAN</span>
+            </div>
       </div>
   <div class="spinner-wrap">
     <div class="spinner-outer"></div>
-    <div class="spinner-center"></div>
-    <div class="play-sprite"></div>
+
   </div>
   
-  <audio loop='loop'>
+    <audio>
     <source src='http://radiobratan.tk:8000/radio_bratan_192.mp3' type='audio/mp3' />
 </audio>
   </div> 

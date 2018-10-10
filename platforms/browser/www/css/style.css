@@ -76,20 +76,6 @@ position: fixed;
   align-items: center;
   overflow: hidden;
 }
-@keyframes scroll-left {
-
-  0%  {
-      -moz-transform:translateX(30%);
-      -webkit-transform:translateX(30%);
-      transform:translateX(30%);
-    }
-  
-    100%{
-      -moz-transform:translateX(-80%);
-      -webkit-transform:translateX(-80%);
-      transform:translateX(-80%);
-    }
-  }
 
 .songmodule {
 /* position: absolute; */
@@ -108,28 +94,27 @@ box-shadow: 0px 0px 20px 5px rgba(0,0,0); */
 -webkit-box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.75), 0px 0px 20px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.75), 0px 0px 20px 0px rgba(0,0,0,0.75);
 box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.75), 0px 0px 20px 0px rgba(0,0,0,0.75);
-/* transition: all 500ms; */
-/* text-align: center; */
 }
 .songtitle{
   text-align: left;
   margin: 0 auto;
-color: #f6f6c4;
+color: #fff;
 font-size: 30px;
-line-height: 120%;
+line-height: 105%;
 font-family: 'Bender-Bold';
 font-weight: normal;
 white-space: nowrap;
-transform: translateX(1400px);
-/* animation: scroll-left 15s linear infinite; */
+transform: translateX(1500px);
 position: absolute;
-/* transition: all 50ms; */
+transition: transform linear 1000ms;
 }
+
 .songstatus{
-  width: 50%;
+  width: 0%;
   height: 100%;
-  background-color: rgba(100, 0, 0, 0.5);
-/* transition: all 50ms; */
+  background-color: rgba(100, 0, 0, 0.9);
+transition: all 5000ms;
+z-index: 3;
 
 }
 .spinner-wrap {
@@ -234,7 +219,28 @@ box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.75), 0px 0px 20px 0px rgba(0,0,0
   }
   .songtitle{
     font-size: 84px;
-line-height: 150%;
+line-height: 130%;
 
+  }
+}
+@media only screen and (min-width: 950px) {
+  .songmodule{
+    height: 120px;
+    width: 70%;
+  }
+  .songtitle{
+    font-size: 84px;
+line-height: 130%;
+
+  }
+  .spinner-wrap{
+    width: 496px;
+    height: 496px;
+  }
+  .spinner-outer{
+    background-size: 500px 500px;
+    -webkit-box-shadow: inset 0px 0px 40px 0px rgba(0,0,0,0.75), 0px 0px 40px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 40px 0px rgba(0,0,0,0.75), 0px 0px 40px 0px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 40px 0px rgba(0,0,0,0.75), 0px 0px 40px 0px rgba(0,0,0,0.75);
   }
 }

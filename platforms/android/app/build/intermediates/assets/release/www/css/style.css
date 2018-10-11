@@ -40,9 +40,8 @@ width: 100%;
   	margin: 0 auto;
 font-family: 'Bender-Bold';
 font-weight: normal;
-background-color: #333;
-background: url('../img/bratan_bg1.jpg') no-repeat center;
-/* background: url('../img/bratan_bg1.jpg') no-repeat 100% 100%; */
+background: url('../img/BG_2.jpg') no-repeat;
+background-size: cover;
 position: fixed;
 }
 .main{
@@ -57,23 +56,24 @@ position: fixed;
 
 .songmodule {
   margin:  10px 10px 0 10px;
-  height: 36px;
-  width: 80%;
+height: 120px;
+  width: 90%;
 border-radius: 10px;
-background-color: rgba(0,0,0,0.5);
+background-color: rgba(255, 255, 255,0.1);
 z-index: 2;
 overflow: hidden;
 text-align: left;
--webkit-box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.75), 0px 0px 20px 0px rgba(0,0,0,0.75);
--moz-box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.75), 0px 0px 20px 0px rgba(0,0,0,0.75);
-box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.75), 0px 0px 20px 0px rgba(0,0,0,0.75);
+border: 1px solid rgba(255, 255, 255, 0.67);
+-webkit-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
 }
 .songtitle{
+  font-size: 84px;
+line-height: 130%;
   text-align: left;
   margin: 0 auto;
 color: #fff;
-font-size: 30px;
-line-height: 105%;
 white-space: nowrap;
 transform: translateX(1500px);
 position: absolute;
@@ -81,13 +81,16 @@ transition: transform linear 1000ms;
 }
 .opacity{
   opacity: 0;
-  /* transition: all 100ms; */
+  transition: all 50ms;
 }
 
 .songstatus{
   width: 0%;
   height: 100%;
-  background-color: rgba(153, 0, 0, 0.67);
+  background-color: rgba(153, 0, 0, 0.4);
+  border-radius: 10px;
+border-right: 1px solid rgba(255, 255, 255, 0.4);
+
 transition: all 5000ms;
 z-index: 3;
 
@@ -95,8 +98,8 @@ z-index: 3;
 .spinner-wrap {
   display: block;
   position: relative;
-  width: 260px;
-  height: 260px;
+  width: 300px;
+  height: 300px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -117,20 +120,14 @@ z-index: 3;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   border-radius: 50%;
-  background: url("../img/plast_paused.png") center center no-repeat rgba(0,0,0,0.5);
-background-size: 260px 260px;
--webkit-box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.75), 0px 0px 20px 0px rgba(0,0,0,0.75);
--moz-box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.75), 0px 0px 20px 0px rgba(0,0,0,0.75);
-box-shadow: inset 0px 0px 20px 0px rgba(0,0,0,0.75), 0px 0px 20px 0px rgba(0,0,0,0.75);
+  background: url("../img/plast_paused.png") center center no-repeat ;
+background-size: 300px 300px;
+-webkit-box-shadow:0px 0px 20px 0px rgba(0,0,0,0.75);
+-moz-box-shadow:0px 0px 20px 0px rgba(0,0,0,0.75);
+box-shadow:0px 0px 20px 0px rgba(0,0,0,0.75);
 transition: all 1500ms;
 
 }
-.playing .spinner-outer {
-  animation: spin-cw 20s linear 0s infinite;
-  background: url("../img/plast_logo.png") center center no-repeat rgba(0,0,0,0.5);
-  background-size: 260px 260px;
-}
-
 
 @keyframes spin-cw {
   from {
@@ -140,15 +137,7 @@ transition: all 1500ms;
     transform: rotate(360deg);
   }
 }
-@keyframes spin-ccw {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-}
-@media only screen and (max-width: 440px) {
+@media only screen and (max-width: 400px) {
   .songmodule{
     height: 120px;
     width: 90%;
@@ -156,41 +145,27 @@ transition: all 1500ms;
   .songtitle{
     font-size: 84px;
 line-height: 130%;
-
   }
+  .spinner-wrap{
+    width: 260px;
+    height: 260px;
+  }
+  .spinner-outer{
+  background: url("../img/plast_paused.png") center center no-repeat ;
+background-size: 260px 260px;}
 }
-@media only screen and (min-width: 950px) {
+@media only screen and (min-width: 590px) {
   .songmodule{
     height: 120px;
-    width: 70%;
+    width: 90%;
   }
 
-  .songtitle{
-  text-align: left;
-  margin: 0 auto;
-color: #fff;
-    font-size: 84px;
-line-height: 130%;
-white-space: nowrap;
-transform: translateX(1500px);
-position: absolute;
-transition: transform linear 1000ms;
-}
-
   .spinner-wrap{
-    width: 496px;
-    height: 496px;
+    width: 500px;
+    height: 500px;
   }
   .spinner-outer{
     background-size: 500px 500px;
-    -webkit-box-shadow: inset 0px 0px 40px 0px rgba(0,0,0,0.75), 0px 0px 40px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: inset 0px 0px 40px 0px rgba(0,0,0,0.75), 0px 0px 40px 0px rgba(0,0,0,0.75);
-    box-shadow: inset 0px 0px 40px 0px rgba(0,0,0,0.75), 0px 0px 40px 0px rgba(0,0,0,0.75);
   }
-  .playing .spinner-outer {
-    animation: spin-cw 20s linear 0s infinite;
-    background: url("../img/plast_logo.png") center center no-repeat rgba(0,0,0,0.5);
-    background-size: 500px 500px;
-    transition: all 1500ms;
-  }
+
 }

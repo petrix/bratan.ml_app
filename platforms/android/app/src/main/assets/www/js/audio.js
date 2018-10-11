@@ -9,10 +9,15 @@ $(document).ready(function () {
       console.log(audio);
       audio.load();
       audio.play();
-      $this.addClass('playing');
+      spinWidth = $('#spinner').width();
+      $('#spinner').css({'background':'url("img/plast_logo.png") center center no-repeat','background-size': spinWidth + 'px ' + spinWidth + 'px','animation': 'spin-cw 20s linear infinite'})
     } else {
+      $('#spinner').css({'background':'url("img/plast_paused.png") center center no-repeat','background-size': spinWidth + 'px ' + spinWidth + 'px','animation-play-state': 'paused'})
+
       audio.pause();
-      $this.removeClass('playing');
+
     }
   });
 });
+
+

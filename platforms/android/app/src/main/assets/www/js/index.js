@@ -28,12 +28,6 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
-        // screen.orientation.lock('portrait-primary');
-        if(screen.orientation.type) { 
-                screen.orientation.lock('portrait'); 
-        } else { 
-            screen.lockOrientation('portrait'); 
-        } 
     },
 
     // Update DOM on a Received Event

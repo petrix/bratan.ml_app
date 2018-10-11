@@ -1,4 +1,4 @@
-#Wed Oct 10 22:20:11 EEST 2018
+#Thu Oct 11 06:08:30 EEST 2018
 base.0=D\:\\phoneGap\\bratan.ml_app\\platforms\\android\\app\\build\\intermediates\\transforms\\dex\\release\\0
 path.0=classes.dex
 renamed.0=classes.dex

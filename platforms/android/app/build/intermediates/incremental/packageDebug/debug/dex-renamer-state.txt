@@ -1,4 +1,4 @@
-#Tue Oct 09 12:36:17 EEST 2018
+#Thu Oct 11 06:34:24 EEST 2018
 base.0=D\:\\phoneGap\\bratan.ml_app\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 path.0=classes.dex
 renamed.0=classes.dex

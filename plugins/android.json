@@ -7,16 +7,9 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova-plugin-screen-orientation": {
-      "PACKAGE_NAME": "com.p3xx.bratan"
-    },
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.p3xx.bratan"
     }
   },
-  "dependent_plugins": {
-    "es6-promise-plugin": {
-      "PACKAGE_NAME": "com.p3xx.bratan"
-    }
-  }
+  "dependent_plugins": {}
 }

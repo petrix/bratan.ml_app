@@ -1,39 +1,54 @@
-$(document).ready(function(){
-
-
-var intId;
-var z = 0;
-var w = $( window ).width();
-    var ww = w;
-    var www = w;
-  var intervalId = function(){
-
-    z++;
-
-var x = $('#x').html();
-var y = x.length;
-var yLength = ww + x.length * (parseFloat($("#x").css("font-size"))) / 1.8;
-// console.log(parseFloat($("#x").css("font-size")));
-// console.log(y);
-// console.log(w);
-
-    ww=ww-2;
-    www=www-2;
-if(yLength > 0){
-console.log(yLength);
-  $('#x').css('transform', 'translateX('   + www  + 'px)');
-  } else {
-    // console.log(www)
-    // clearInterval(intId);
-    z = 0;
-    www = w;
-    ww = w;
-    // yLength = ww + x.length * 20;
-    // intId = setInterval(intervalId, 50);
+$(document).ready(function () {
+  var intId;
+  var ww, w , yLength;
+  var step = 80;
+  if($('.main').width() < 400){
+    w = $('.main').width();
+  }else{
+  w = ($('.main').width() - $('.songmodule').width()) / 2 + $('.songmodule').width();
   }
+  ww = w;
+
+
+  var intervalId = function () {
+    $(window).resize(function () {
+      $('.songtitle').addClass('opacity');
+      if($('.main').width() < 400){
+        w = $('.main').width();
+      }else{
+      w = ($('.main').width() - $('.songmodule').width()) / 2 + $('.songmodule').width();
+      }
+      ww = w;
+    });
+    // console.log('ww - ' + ww);
+    
+    // var yLength = ww + $('.songtitle').html().length * (parseFloat($('.songtitle').css('font-size'))) / 1.7;
+    yLength = w + $('.songtitle').width()+(w/10);
+console.log($('.songtitle').width());
+console.log('ww - ' + ww);
+console.log('w - ' + w);
+console.log('yLength - ' + yLength);
+console.log($('.main').width());
+// console.log($('.songtitle').html().length * parseFloat($('.songtitle').css('font-size')) / 1.7);
+
+    if ((ww + (yLength-w)) > 0) {
+      $('.songtitle').css('transform', 'translateX(' + ww + 'px)');
+      if (ww < (w-(w/10))) {
+        $('.songtitle').removeClass('opacity');
+    }
+    } else {
+      $('.songtitle').addClass('opacity');
+      $.getJSON('http://radiobratan.tk:88/api/nowplaying', function (data) {
+        $('.songtitle').html(data[0].now_playing.song.text);
+      });
+      ww = w + step;
+      
+    }
+
+    ww -= step;
+
   }
-  
   clearInterval(intId);
-  intId = setInterval(intervalId, 20);
+  intId = setInterval(intervalId, 1000);
 
 });

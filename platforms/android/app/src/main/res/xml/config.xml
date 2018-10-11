@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.p3xx.bratan" version="1.2.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.p3xx.bratan" version="1.2.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <feature name="Whitelist">
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
@@ -20,10 +20,10 @@
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
     <allow-intent href="market:*" />
-    <icon density="mdpi" src="/res/icon/android/res/mipmap-mdpi/bratan.png" />
-    <icon density="hdpi" src="/res/icon/android/res/mipmap-hdpi/bratan.png" />
-    <icon density="xhdpi" src="/res/icon/android/res/mipmap-xhdpi/bratan.png" />
-    <icon density="xxhdpi" src="/res/icon/android/res/mipmap-xxhdpi/bratan.png" />
-    <icon density="xxxhdpi" src="/res/icon/android/res/mipmap-xxxhdpi/bratan.png" />
+    <icon density="mdpi" src="/res/icon/android/res/mipmap-mdpi/ic_launcher.png" />
+    <icon density="hdpi" src="/res/icon/android/res/mipmap-hdpi/ic_launcher.png" />
+    <icon density="xhdpi" src="/res/icon/android/res/mipmap-xhdpi/ic_launcher.png" />
+    <icon density="xxhdpi" src="/res/icon/android/res/mipmap-xxhdpi/ic_launcher.png" />
+    <icon density="xxxhdpi" src="/res/icon/android/res/mipmap-xxxhdpi/ic_launcher.png" />
     <preference name="loglevel" value="DEBUG" />
 </widget>

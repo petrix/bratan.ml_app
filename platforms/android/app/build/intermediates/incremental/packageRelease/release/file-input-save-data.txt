@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu Oct 11 13:33:03 EEST 2018
+#Thu Oct 11 19:10:42 EEST 2018
 17.baseType=DIRECTORY
 4.path=www/favicons/favicon.ico
 25.base=D\:\\phoneGap\\bratan.ml_app\\platforms\\android\\app\\build\\intermediates\\assets\\release

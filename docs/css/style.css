@@ -9,7 +9,6 @@
 
 * {
   box-sizing: border-box;
-  
 }
 
 html {
@@ -82,12 +81,12 @@ white-space: nowrap;
 /* transform: translateX(1500px); */
 position: absolute;
 opacity: 1;
-visibility: visible;
+/* visibility: visible; */
 transition: transform linear 1000ms;
 /* transition: opacity 500ms; */
 }
-.opacity{
-visibility: hidden;
+.songtitle-transparent{
+/* visibility: hidden; */
 opacity: 0;
 transition: transform linear 1000ms;
 /* transition: opacity 500ms; */

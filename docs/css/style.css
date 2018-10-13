@@ -78,18 +78,14 @@ text-align: left;
 margin: 0 auto;
 color: #fff;
 white-space: nowrap;
-/* transform: translateX(1500px); */
+transform: translateX(1500px);
 position: absolute;
-opacity: 1;
-/* visibility: visible; */
-transition: transform linear 1000ms;
-/* transition: opacity 500ms; */
-}
-.songtitle-transparent{
-/* visibility: hidden; */
 opacity: 0;
 transition: transform linear 1000ms;
-/* transition: opacity 500ms; */
+}
+.opacity{
+opacity: 1;
+transition: transform linear 1000ms;
 }
 
 .songstatus{
@@ -156,10 +152,15 @@ line-height: 130%;
   .spinner-wrap{
     width: 260px;
     height: 260px;
+transition: all 1500ms;
+
   }
   .spinner-outer{
   background: url("../img/plast_paused.png") center center no-repeat ;
-background-size: 260px 260px;}
+background-size: 260px 260px;
+transition: all 1500ms;
+
+}
 }
 @media only screen and (min-width: 590px) {
   .songmodule{
@@ -170,9 +171,13 @@ background-size: 260px 260px;}
   .spinner-wrap{
     width: 500px;
     height: 500px;
+transition: all 1500ms;
+
   }
   .spinner-outer{
     background-size: 500px 500px;
+transition: all 1500ms;
+
   }
 
 }

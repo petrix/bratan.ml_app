@@ -20,7 +20,6 @@ $(document).ready(function () {
       if( slideLeft < $('.songmodule').width()){
         $('.songtitle').addClass('opacity');
       }
-      
       $('.songtitle').css('transform', 'translateX(' + slideLeft + 'px)');
     } else {
       $('.songtitle').removeClass('opacity');

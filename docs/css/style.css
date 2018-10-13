@@ -165,7 +165,7 @@ transition: all 1500ms;
 @media only screen and (min-width: 590px) {
   .songmodule{
     height: 120px;
-    width: 70%;
+    width: 80%;
   }
 
   .spinner-wrap{

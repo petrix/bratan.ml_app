@@ -20,7 +20,8 @@
   <!-- <link rel="stylesheet" type="text/css" href="fonts/bender-all/bender.css">  -->
 
   <script src="js/jquery-3.3.1.min.js"></script>
-
+  <script src="js/marquee.js" defer></script>
+  <script src="js/status.js" defer></script>
   <script type="text/javascript" src="cordova.js"></script>
   <script src="js/audio.js"></script>
   <script type="application/ld+json">
@@ -52,7 +53,7 @@
     <div class="songmodule">
 
       <div class="songstatus">
-        <span data-shoutcast-value="songtitle" class="opacity songtitle">RADIO BRATAN</span>
+        <span data-shoutcast-value="songtitle" id = "title" class="opacity songtitle">RADIO BRATAN</span>
       </div>
     </div>
     <div class="spinner-wrap">
@@ -64,8 +65,7 @@
       <source src='http://radiobratan.tk:8000/radio_bratan_192.mp3' type='audio/mp3' />
     </audio>
   </div>
-  <script src="js/marquee.js"></script>
-  <script src="js/status.js"></script>
+
 
 
 

@@ -13,7 +13,7 @@
 
 html {
   height: 100%;
-  min-width: 444px;
+  /* min-width: 444px; */
 }
 
 h1, h2, h3, h4, ul, ol, figure {
@@ -40,7 +40,7 @@ body {
   margin: 0 auto;
   font-family: 'Bender-Bold';
   font-weight: normal;
-  background: url('../img/BG_2.jpg') no-repeat;
+  background: url('../img/BG_2.jpg') center center no-repeat;
   background-size: cover;
   position: fixed;
   z-index: 0;

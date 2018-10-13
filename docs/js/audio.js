@@ -6,6 +6,11 @@ $(document).ready(function () {
         // Alternatively you could use:
         // (new Image()).src = this;
     });
+    preload([
+      'img/plast_logo.png',
+      'img/plast_paused.png',
+      'img/BG_2.jpg'
+  ]);
 }
   $('audio').data('bpm', '1');
   $('.spinner-wrap').click(function () {

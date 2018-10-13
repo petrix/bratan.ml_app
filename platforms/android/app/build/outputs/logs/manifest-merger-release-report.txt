@@ -4,7 +4,7 @@ ADDED from D:\phoneGap\bratan.ml_app\platforms\android\app\src\main\AndroidManif
 INJECTED from D:\phoneGap\bratan.ml_app\platforms\android\app\src\main\AndroidManifest.xml:2:1-14:12
 INJECTED from D:\phoneGap\bratan.ml_app\platforms\android\app\src\main\AndroidManifest.xml:2:1-14:12
 INJECTED from D:\phoneGap\bratan.ml_app\platforms\android\app\src\main\AndroidManifest.xml:2:1-14:12
-MERGED from [:CordovaLib] D:\phoneGap\bratan.ml_app\platforms\android\CordovaLib\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:20:1-27:12
+MERGED from [:CordovaLib] D:\phoneGap\bratan.ml_app\platforms\android\CordovaLib\build\intermediates\manifests\full\release\AndroidManifest.xml:20:1-27:12
 INJECTED from D:\phoneGap\bratan.ml_app\platforms\android\app\src\main\AndroidManifest.xml:2:1-14:12
 INJECTED from D:\phoneGap\bratan.ml_app\platforms\android\app\src\main\AndroidManifest.xml:2:1-14:12
 INJECTED from D:\phoneGap\bratan.ml_app\platforms\android\app\src\main\AndroidManifest.xml:2:1-14:12
@@ -68,7 +68,7 @@ ADDED from D:\phoneGap\bratan.ml_app\platforms\android\app\src\main\AndroidManif
 		ADDED from D:\phoneGap\bratan.ml_app\platforms\android\app\src\main\AndroidManifest.xml:6:231-293
 	android:name
 		ADDED from D:\phoneGap\bratan.ml_app\platforms\android\app\src\main\AndroidManifest.xml:6:203-230
-intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
 ADDED from D:\phoneGap\bratan.ml_app\platforms\android\app\src\main\AndroidManifest.xml:7:13-10:29
 	android:label
 		ADDED from D:\phoneGap\bratan.ml_app\platforms\android\app\src\main\AndroidManifest.xml:7:28-65
@@ -81,14 +81,10 @@ ADDED from D:\phoneGap\bratan.ml_app\platforms\android\app\src\main\AndroidManif
 	android:name
 		ADDED from D:\phoneGap\bratan.ml_app\platforms\android\app\src\main\AndroidManifest.xml:9:27-74
 uses-sdk
-ADDED from D:\phoneGap\bratan.ml_app\platforms\android\app\src\main\AndroidManifest.xml:13:5-47
-INJECTED from D:\phoneGap\bratan.ml_app\platforms\android\app\src\main\AndroidManifest.xml:13:5-47
-MERGED from [:CordovaLib] D:\phoneGap\bratan.ml_app\platforms\android\CordovaLib\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:25:5-44
-MERGED from [:CordovaLib] D:\phoneGap\bratan.ml_app\platforms\android\CordovaLib\build\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:25:5-44
-INJECTED from D:\phoneGap\bratan.ml_app\platforms\android\app\src\main\AndroidManifest.xml:13:5-47
+ADDED from D:\phoneGap\bratan.ml_app\platforms\android\app\src\main\AndroidManifest.xml:13:5-74
+MERGED from [:CordovaLib] D:\phoneGap\bratan.ml_app\platforms\android\CordovaLib\build\intermediates\manifests\full\release\AndroidManifest.xml:25:5-44
+MERGED from [:CordovaLib] D:\phoneGap\bratan.ml_app\platforms\android\CordovaLib\build\intermediates\manifests\full\release\AndroidManifest.xml:25:5-44
 	android:targetSdkVersion
-		ADDED from D:\phoneGap\bratan.ml_app\platforms\android\app\src\main\AndroidManifest.xml:13:15-44
+		ADDED from D:\phoneGap\bratan.ml_app\platforms\android\app\src\main\AndroidManifest.xml:13:42-71
 	android:minSdkVersion
-		INJECTED from D:\phoneGap\bratan.ml_app\platforms\android\app\src\main\AndroidManifest.xml
-		ADDED from D:\phoneGap\bratan.ml_app\platforms\android\app\src\main\AndroidManifest.xml:13:5-47
-		INJECTED from D:\phoneGap\bratan.ml_app\platforms\android\app\src\main\AndroidManifest.xml
+		ADDED from D:\phoneGap\bratan.ml_app\platforms\android\app\src\main\AndroidManifest.xml:13:15-41

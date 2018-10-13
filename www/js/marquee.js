@@ -18,7 +18,7 @@ $('.eq').click(function(){
   if(!eqDisplay){
   $('.spinner-module').css('display', 'none');
   $('.songmodule').css('display', 'none');
-  $('.equalizer').css('display', 'block');
+  $('.equalizer').css('display', 'flex');
   eqDisplay = true;
   }else{
     $('.spinner-module').css('display', 'block');
@@ -28,6 +28,13 @@ $('.eq').click(function(){
   }
 });
 
+
+$('.status').click(function(){
+  var acousticGuitar = new Pz.Sound('http://radiobratan.tk:8000/radio_bratan_192.mp3', function() {
+    // Sound loaded!
+    acousticGuitar.play();
+});
+});
 
 
 //////----END OF EQUALIZER----//////

@@ -22,6 +22,8 @@
   <meta name="format-detection" content="telephone=yes">
 
   <script src="js/jquery-3.3.1.min.js" defer></script>
+  <script src="js/Pizzicato.min.js" defer></script>
+  <script src="js/eq.js" defer></script>
   <script src="js/marquee.js" defer></script>
   
   <script type="text/javascript" src="cordova.js"></script>
@@ -64,8 +66,23 @@
 
     <audio>
       <source src='http://radiobratan.tk:8000/radio_bratan_192.mp3' type='audio/mp3' />
+      <source src='http://radiobratan.tk:8000/radio_bratan_192.mp3' type='audio/mpeg' />
     </audio>
     <div class="equalizer">
+        
+            <div class="controls">
+              <label>Low Gain</label>
+              <input type="range" value="100" step="1" min="0" max="100" oninput="changeGain(this.value, 'lowGain');"></input>
+            </div>
+            <div class="controls">
+              <label>Mid Gain</label>
+              <input type="range" value="100" step="1" min="0" max="100" oninput="changeGain(this.value, 'midGain');"></input>
+            </div>
+            <div class="controls">
+              <label>High Gain</label>
+              <input type="range" value="100" step="1" min="0" max="100" oninput="changeGain(this.value, 'highGain');"></input>
+            </div>
+          
   <p>HIDDEN SCREEN</p>
 </div>
   </div>

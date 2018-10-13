@@ -5,14 +5,19 @@ $(document).ready(function () {
     var $this = $(this),
       audio = $this.siblings('audio')[0],
       bpm = $this.siblings('audio').data('bpm');
+      audio.volume = 0;
     if (audio.paused) {
-      console.log(audio);
+      // console.log(audio.volume);
+      // audio.load().volume = 0;
       audio.load();
+      // audio.volume = 0;
       audio.play();
+      $('audio').animate({volume: 1}, 500);
       spinWidth = $('#spinner').width();
-      $('#spinner').css({'background':'url("img/plast_logo.png") center center no-repeat','background-size': spinWidth + 'px ' + spinWidth + 'px','animation': 'spin-cw 20s linear infinite'})
+      $('#spinner').css({'background':'url("img/plast_logo.png") center center no-repeat','background-size': spinWidth + 'px ' + spinWidth + 'px','animation': 'spin-cw 20s linear infinite'});
     } else {
-      $('#spinner').css({'background':'url("img/plast_paused.png") center center no-repeat','background-size': spinWidth + 'px ' + spinWidth + 'px','animation-play-state': 'paused'})
+      $('#spinner').css({'background':'url("img/plast_paused.png") center center no-repeat','background-size': spinWidth + 'px ' + spinWidth + 'px','animation-play-state': 'paused'});
+      $('audio').animate({volume: 1}, 500);
 
       audio.pause();
 

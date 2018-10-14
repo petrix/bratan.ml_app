@@ -12,18 +12,19 @@
   <meta name="application-name" content="RADIO BRATAN">
   <meta name="theme-color" content="#ffffff">
   <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+  <link rel="stylesheet" href="css/fa-solid/solid.css">
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/style.css">
-
+  <link rel="stylesheet" href="css/inputrange.css">
+  
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="format-detection" content="telephone=yes">
-  <!-- <link rel="stylesheet" type="text/css" href="fonts/bender-all/bender.css">  -->
 
-  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-3.3.1.min.js" defer></script>
   <script src="js/marquee.js" defer></script>
-  <script src="js/status.js" defer></script>
+  
   <script type="text/javascript" src="cordova.js"></script>
-  <script src="js/audio.js"></script>
+
   <script type="application/ld+json">
     {
       "@context": "http://schema.org",
@@ -38,7 +39,6 @@
     }
   </script>
 
-
   <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
@@ -48,26 +48,51 @@
 </head>
 
 <body>
-
-  <div class="main">
+<div class="main">
+  <div class="player">
     <div class="songmodule">
-
       <div class="songstatus">
-        <span data-shoutcast-value="songtitle" id = "title" class="opacity songtitle">RADIO BRATAN</span>
+        <span data-shoutcast-value="songtitle" class="opacity songtitle songtitlestyle">RADIO BRATAN</span>
       </div>
+      <span data-shoutcast-value="songtitle" class="opacity songtitle songtitlestyle">RADIO BRATAN</span>
     </div>
-    <div class="spinner-wrap">
+    <div class="spinner-module">
       <div id="spinner" class="spinner-outer"></div>
 
     </div>
 
-    <audio>
+    <audio class="audio" preload="none">
+      <source src='http://radiobratan.tk:8000/radio_bratan_192.mp3' type='audio/mpeg' />
       <source src='http://radiobratan.tk:8000/radio_bratan_192.mp3' type='audio/mp3' />
     </audio>
+    <div class="eq">
+            <div class="controls">
+              <label>Volume</label>
+              <input type="range" id="volume" value="70" step="1" min="0" max="100" />
+            </div>
+            <div class="controls">
+              <label>Low Gain</label>
+              <input type="range" id="eqLow" value="100" step="1" min="0" max="100" />
+            </div>
+            <div class="controls">
+              <label>Mid Gain</label>
+              <input type="range" id="eqMid" value="100" step="1" min="0" max="100" />
+            </div>
+            <div class="controls">
+              <label>High Gain</label>
+              <input type="range" id="eqHigh" value="100" step="1" min="0" max="100"  />
+            </div>
+    </div>
+    <div class="qr">
+      <img src="img/qr-play-google-com.svg" alt="">
+    </div>
   </div>
-
-
-
+  </div>
+  <div class="footer">
+    <span class="status">status</span>
+    <img class="qr-click" src="img/Google_Play_2015.svg" alt="">
+    <i class="fas fa-cogs"></i>
+  </div>
 
 </body>
 

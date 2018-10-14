@@ -28,7 +28,7 @@ ul, ol {
 a {
   text-decoration: none;
 }
-i{
+i {
   font-size: 30px;
 }
 
@@ -77,7 +77,7 @@ body {
   align-items: center;
   overflow: hidden;
 }
-.equalizer{
+.eq{
   width: 100%;
   height: 100%;
   display: none;
@@ -123,7 +123,6 @@ transition: transform linear 1000ms;
   background-color: rgba(153, 0, 0, 0.4);
   border-radius: 10px;
 border-right: 1px solid rgba(255, 255, 255, 0.4);
-
 transition: all 5000ms;
 z-index: 3;
 }
@@ -157,7 +156,7 @@ background-size: 300px 300px;
 -webkit-box-shadow:0px 0px 20px 0px rgba(0,0,0,0.75);
 -moz-box-shadow:0px 0px 20px 0px rgba(0,0,0,0.75);
 box-shadow:0px 0px 20px 0px rgba(0,0,0,0.75);
-transition: all 1500ms;
+transition: all 1000ms;
 
 }
 
@@ -181,13 +180,13 @@ line-height: 130%;
   .spinner-module{
     width: 260px;
     height: 260px;
-transition: all 1500ms;
+transition: all 1000ms;
 
   }
   .spinner-outer{
   background: url("../img/plast_paused.png") center center no-repeat ;
 background-size: 260px 260px;
-transition: all 1500ms;
+transition: all 1000ms;
 
 }
 }
@@ -203,12 +202,12 @@ transition: all 1500ms;
   .spinner-module{
     width: 500px;
     height: 500px;
-transition: all 1500ms;
+transition: all 1000ms;
 
   }
   .spinner-outer{
     background-size: 500px 500px;
-transition: all 1500ms;
+transition: all 1000ms;
 
   }
 

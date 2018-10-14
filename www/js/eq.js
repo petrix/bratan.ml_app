@@ -8,9 +8,11 @@
 // andre.michelle@gmail.com
 
 var context = new AudioContext();
-var mediaElement = $('audio');
+// var mediaElement = document.getElementsByClassName('audio');
+// var $this = $(this);
+var mediaElement = document.getElementsByClassName('audio');
 var sourceNode = context.createMediaElementSource(mediaElement);
-
+console.log(sourceNode);
 // EQ Properties
 //
 var gainDb = -50.0;

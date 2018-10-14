@@ -14,7 +14,6 @@
   <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
   <link rel="stylesheet" href="css/fontavesome/css/all.min.css">
   <link rel="stylesheet" href="css/normalize.css">
-  
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/style.css">
   
@@ -22,8 +21,7 @@
   <meta name="format-detection" content="telephone=yes">
 
   <script src="js/jquery-3.3.1.min.js" defer></script>
-  <script src="js/Pizzicato.min.js" defer></script>
-  <script src="js/eq.js" defer></script>
+  <!-- <script src="js/Pizzicato.min.js" defer></script> -->
   <script src="js/marquee.js" defer></script>
   
   <script type="text/javascript" src="cordova.js"></script>
@@ -64,11 +62,11 @@
 
     </div>
 
-    <audio>
-      <source src='http://radiobratan.tk:8000/radio_bratan_192.mp3' type='audio/mp3' />
+    <audio class="audio" autoplay crossorigin preload="none">
       <source src='http://radiobratan.tk:8000/radio_bratan_192.mp3' type='audio/mpeg' />
+      <source src='http://radiobratan.tk:8000/radio_bratan_192.mp3' type='audio/mp3' />
     </audio>
-    <div class="equalizer">
+    <div class="eq">
         
             <div class="controls">
               <label>Low Gain</label>
@@ -89,11 +87,12 @@
   </div>
   <div class="footer">
     <span class="status">status</span>
-    <i class="fas fa-cogs eq"></i>
+    <i class="fas fa-cogs"></i>
   </div>
 
 
 
+  <!-- <script src="js/eq.js"></script> -->
 
 </body>
 

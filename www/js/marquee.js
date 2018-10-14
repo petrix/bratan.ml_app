@@ -14,26 +14,18 @@ $(document).ready(function () {
 
 //////----EQUALIZER----//////
 var eqDisplay = false;
-$('.eq').click(function(){
-  if(!eqDisplay){
+$('.fa-cogs').click(function(){
+  if(eqDisplay){
+  $('.spinner-module').css('display', 'block');
+  $('.songmodule').css('display', 'block');
+  $('.eq').css('display', 'none');
+  eqDisplay = false;
+}else{
   $('.spinner-module').css('display', 'none');
   $('.songmodule').css('display', 'none');
-  $('.equalizer').css('display', 'flex');
+  $('.eq').css('display', 'flex');
   eqDisplay = true;
-  }else{
-    $('.spinner-module').css('display', 'block');
-  $('.songmodule').css('display', 'block');
-  $('.equalizer').css('display', 'none');
-  eqDisplay = false;
   }
-});
-
-
-$('.status').click(function(){
-  var acousticGuitar = new Pz.Sound('http://radiobratan.tk:8000/radio_bratan_192.mp3', function() {
-    // Sound loaded!
-    acousticGuitar.play();
-});
 });
 
 

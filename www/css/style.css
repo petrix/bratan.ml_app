@@ -184,8 +184,8 @@ overflow: hidden;
 }
 .spinnerlogo{
   border-radius: 50%;
-  width: 91px;
-  height: 91px;
+  width: 90px;
+  height: 90px;
   background: url('../img/plast_logo_center.png');
   background-size: cover;
 transition: all 1000ms;
@@ -291,8 +291,8 @@ transition: all 1000ms;
   }
   .spinnerlogo{
     /* border-radius: 50%; */
-    width: 175px;
-    height: 175px;
+    width: 174px;
+    height: 174px;
     /* background: url('../img/plast_logo_center.png'); */
     /* background-size: cover; */
   }

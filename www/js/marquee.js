@@ -27,7 +27,8 @@ audio.volume = 0;
       audio.play();
       spinnerHeight = $('#spinner').height();
       console.log(spinnerHeight);
-      $('#spinner').css({'background':'url("img/plast_logo.png") center center no-repeat','background-size':'cover','animation': 'spin-cw 20s linear infinite'});
+      $('.spinner-outer').css({'animation': 'spin-ccw 20s linear infinite'});
+      $('.spinnerlogo').css({'background':'url("img/plast_logo_center.png") center center no-repeat','background-size':'cover','animation': 'spin-cw 20s linear infinite'});
       volumeCtrl = ($('#volume').val()/100);
       $(audio).animate({volume: volumeCtrl}, 700, function(){
       playingMode = true;
@@ -35,7 +36,7 @@ audio.volume = 0;
     }
     function pushPause(){
       spinnerHeight = $('#spinner').height();
-      $('#spinner').css({'background':'url("img/plast_paused.png") center center no-repeat','background-size':'cover','animation-play-state': 'paused'});
+      $('.spinnerlogo').css({'background':'url("") center center no-repeat','background-size':'cover','animation-play-state': 'paused'});
      
       $(audio).animate({volume: 0}, 300, function(){
         audio.pause();
@@ -328,7 +329,7 @@ $('#eqHigh').on("input change", function() {
         $('.songtitle').html(data[0].now_playing.song.text);
         if (playingMode){
         playerHeight = $('#spinner').height();
-        $('#spinner').css({'background':'url("'+data[0].now_playing.song.art+'") center center no-repeat','background-size':'cover'});
+        $('.spinnerlogo').css({'background':'url("'+data[0].now_playing.song.art+'") center center no-repeat','background-size':'cover'});
         // $('.spinnerlogo').css({'background':'url("img/plast_logo_center.png") center center no-repeat'});
         
       }

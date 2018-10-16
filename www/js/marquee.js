@@ -27,7 +27,7 @@ audio.volume = 0;
       audio.play();
       spinnerHeight = $('#spinner').height();
       console.log(spinnerHeight);
-      $('#spinner').css({'background':'url("img/plast_logo.png") center center no-repeat','background-size': spinnerHeight + 'px ' + spinnerHeight + 'px','animation': 'spin-cw 20s linear infinite', 'transition':'all 700ms'});
+      $('#spinner').css({'background':'url("img/plast_logo.png") center center no-repeat','background-size':'cover','animation': 'spin-cw 20s linear infinite'});
       volumeCtrl = ($('#volume').val()/100);
       $(audio).animate({volume: volumeCtrl}, 700, function(){
       playingMode = true;
@@ -35,7 +35,7 @@ audio.volume = 0;
     }
     function pushPause(){
       spinnerHeight = $('#spinner').height();
-      $('#spinner').css({'background':'url("img/plast_paused.png") center center no-repeat','background-size': spinnerHeight + 'px ' + spinnerHeight + 'px','animation-play-state': 'paused', 'transition':'all 300ms'});
+      $('#spinner').css({'background':'url("img/plast_paused.png") center center no-repeat','background-size':'cover','animation-play-state': 'paused'});
      
       $(audio).animate({volume: 0}, 300, function(){
         audio.pause();
@@ -81,6 +81,7 @@ audio.volume = 0;
   });
   $(document).bind('keydown', '1', function() {
     spinnerHeight = $('.player').height() - 2;
+    console.log(spinnerHeight);
   if(eqDisplay == 1){
   $('div.player > :nth-child(1)').css('display', 'block');
   $('div.player > :nth-child(2)').css('display', 'none');
@@ -99,7 +100,6 @@ audio.volume = 0;
     if (eqLow<=95) {
       eqLow +=5;
       $('#eqLow').val(eqLow);
-      // lGain.gain.value = ($(this).val()/100);
       lGain.gain.value = ($('#eqLow').val()/100);
    }
   });
@@ -116,7 +116,6 @@ audio.volume = 0;
     if (eqMid<=95) {
       eqMid +=5;
       $('#eqMid').val(eqMid);
-      // lGain.gain.value = ($(this).val()/100);
       mGain.gain.value = ($('#eqMid').val()/100);
    }
   });
@@ -133,7 +132,6 @@ audio.volume = 0;
     if (eqHigh<=95) {
       eqHigh +=5;
       $('#eqHigh').val(eqHigh);
-      // lGain.gain.value = ($(this).val()/100);
       hGain.gain.value = ($('#eqHigh').val()/100);
    }
   });
@@ -150,7 +148,6 @@ audio.volume = 0;
     if (eqLow<=95) {
       eqLow +=5;
       $('#eqLow').val(eqLow);
-      // lGain.gain.value = ($(this).val()/100);
       lGain.gain.value = ($('#eqLow').val()/100);
    }
   });
@@ -167,7 +164,6 @@ audio.volume = 0;
     if (eqMid<=95) {
       eqMid +=5;
       $('#eqMid').val(eqMid);
-      // lGain.gain.value = ($(this).val()/100);
       mGain.gain.value = ($('#eqMid').val()/100);
    }
   });
@@ -312,9 +308,6 @@ $('#eqHigh').on("input change", function() {
 
   var intervalId = function () {
       $(window).resize(function () {
-// console.log(screen.orientation.type);
-      // spinnerHeight = $('#spinner').height(); 
-      // $('#spinner').css({'background-size': + spinnerHeight + 'px ' + spinnerHeight + 'px'});
       $('.songtitle').removeClass('opacity');
       moduleWidth = $('.songmodule').width();
       titleWidth = $('.songtitle').width();
@@ -334,9 +327,11 @@ $('#eqHigh').on("input change", function() {
         $.getJSON('http://radiobratan.tk:88/api/nowplaying', function (data) {
         $('.songtitle').html(data[0].now_playing.song.text);
         if (playingMode){
-        spinnerHeight = $('#spinner').height();
-        $('#spinner').css({'background':'url("'+data[0].now_playing.song.art+'") center center no-repeat','background-size': + spinnerHeight + 'px ' + spinnerHeight + 'px','animation': 'spin-cw 20s linear infinite', 'transition':'all 700ms'});
-        }
+        playerHeight = $('#spinner').height();
+        $('#spinner').css({'background':'url("'+data[0].now_playing.song.art+'") center center no-repeat','background-size':'cover'});
+        // $('.spinnerlogo').css({'background':'url("img/plast_logo_center.png") center center no-repeat'});
+        
+      }
         slideLeft = $('.songmodule').width();
       });
       }else {

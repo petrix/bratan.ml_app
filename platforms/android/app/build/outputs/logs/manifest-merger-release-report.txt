@@ -54,18 +54,20 @@ ADDED from D:\phoneGap\bratan.ml_app\platforms\android\app\src\main\AndroidManif
 		ADDED from D:\phoneGap\bratan.ml_app\platforms\android\app\src\main\AndroidManifest.xml:5:53-80
 activity#com.p3xx.bratan.MainActivity
 ADDED from D:\phoneGap\bratan.ml_app\platforms\android\app\src\main\AndroidManifest.xml:6:9-11:20
+	android:screenOrientation
+		ADDED from D:\phoneGap\bratan.ml_app\platforms\android\app\src\main\AndroidManifest.xml:6:19-55
 	android:label
-		ADDED from D:\phoneGap\bratan.ml_app\platforms\android\app\src\main\AndroidManifest.xml:6:97-134
+		ADDED from D:\phoneGap\bratan.ml_app\platforms\android\app\src\main\AndroidManifest.xml:6:134-171
 	android:launchMode
-		ADDED from D:\phoneGap\bratan.ml_app\platforms\android\app\src\main\AndroidManifest.xml:6:135-165
+		ADDED from D:\phoneGap\bratan.ml_app\platforms\android\app\src\main\AndroidManifest.xml:6:172-202
 	android:windowSoftInputMode
-		ADDED from D:\phoneGap\bratan.ml_app\platforms\android\app\src\main\AndroidManifest.xml:6:257-299
+		ADDED from D:\phoneGap\bratan.ml_app\platforms\android\app\src\main\AndroidManifest.xml:6:294-336
 	android:configChanges
-		ADDED from D:\phoneGap\bratan.ml_app\platforms\android\app\src\main\AndroidManifest.xml:6:19-96
+		ADDED from D:\phoneGap\bratan.ml_app\platforms\android\app\src\main\AndroidManifest.xml:6:56-133
 	android:theme
-		ADDED from D:\phoneGap\bratan.ml_app\platforms\android\app\src\main\AndroidManifest.xml:6:194-256
+		ADDED from D:\phoneGap\bratan.ml_app\platforms\android\app\src\main\AndroidManifest.xml:6:231-293
 	android:name
-		ADDED from D:\phoneGap\bratan.ml_app\platforms\android\app\src\main\AndroidManifest.xml:6:166-193
+		ADDED from D:\phoneGap\bratan.ml_app\platforms\android\app\src\main\AndroidManifest.xml:6:203-230
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
 ADDED from D:\phoneGap\bratan.ml_app\platforms\android\app\src\main\AndroidManifest.xml:7:13-10:29
 	android:label

@@ -365,7 +365,7 @@ $('#eqHigh').on("input change", function() {
       });
       }else {
             $('.songtitle').html('the INTERNET connection is totally fucked up!');
-            slideLeft = $('.songmodule').width() + step;
+            slideLeft = $('.songmodule').width() + step+step;
         }
       //////----END OF CHECK INTERNET CONNECTION----//////
     }
@@ -377,19 +377,21 @@ $('#eqHigh').on("input change", function() {
 
 //////----STATUS----//////
 var statId;
-var status = true;
-var status2 = true;
+var inetCheck = 0;
+var restartPlayer = 0;
   var statusId = function () {
     if(navigator.onLine){
-      status = true;
-      $('.status').html('online');
+    // pushPlay();
+    $('.status').html('online');
       $.getJSON('http://radiobratan.tk:88/api/nowplaying', function (data) {
       $('.songstatus').css('width', (data[0].now_playing.elapsed / data[0].now_playing.duration) * 100 + '%');
       console.log(data[0].now_playing.song.art);
     });
   }else{
-    $('.songstatus').css('width', 100 + '%');
+    // pushPause();
+      $('.songstatus').css('width', 100 + '%');
     $('.status').html('offline');
+    
   }
       }
   clearInterval(statId);

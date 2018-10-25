@@ -107,7 +107,6 @@ audio.volume = 0;
       $('#eqLow').val(eqLow);
       lGain.gain.value = ($('#eqLow').val()/100);
     $('.status').html('low gain: '+eqLow+'%');
-
    }
   });
   $(document).bind('keydown', 'a', function() {
@@ -117,7 +116,6 @@ audio.volume = 0;
       $('#eqLow').val(eqLow);
       lGain.gain.value = ($('#eqLow').val()/100);
     $('.status').html('low gain: '+eqLow+'%');
-
    }
   });
   $(document).bind('keydown', 'w', function() {
@@ -127,7 +125,6 @@ audio.volume = 0;
       $('#eqMid').val(eqMid);
       mGain.gain.value = ($('#eqMid').val()/100);
     $('.status').html('mid gain: '+eqMid+'%');
-
    }
   });
   $(document).bind('keydown', 's', function() {
@@ -137,7 +134,6 @@ audio.volume = 0;
       $('#eqMid').val(eqMid);
       mGain.gain.value = ($('#eqMid').val()/100);
     $('.status').html('mid gain: '+eqMid+'%');
-
    }
   });
   $(document).bind('keydown', 'e', function() {
@@ -147,7 +143,6 @@ audio.volume = 0;
       $('#eqHigh').val(eqHigh);
       hGain.gain.value = ($('#eqHigh').val()/100);
     $('.status').html('high gain: '+eqHigh+'%');
-
    }
   });
   $(document).bind('keydown', 'd', function() {
@@ -157,7 +152,6 @@ audio.volume = 0;
       $('#eqHigh').val(eqHigh);
       hGain.gain.value = ($('#eqHigh').val()/100);
     $('.status').html('high gain: '+eqHigh+'%');
-
    }
   });
   $(document).bind('keydown', '7', function() {
@@ -167,7 +161,6 @@ audio.volume = 0;
       $('#eqLow').val(eqLow);
       lGain.gain.value = ($('#eqLow').val()/100);
     $('.status').html('low gain: '+eqLow+'%');
-
    }
   });
   $(document).bind('keydown', '4', function() {
@@ -177,7 +170,6 @@ audio.volume = 0;
       $('#eqLow').val(eqLow);
       lGain.gain.value = ($('#eqLow').val()/100);
     $('.status').html('low gain: '+eqLow+'%');
-
    }
   });
   $(document).bind('keydown', '8', function() {
@@ -187,7 +179,6 @@ audio.volume = 0;
       $('#eqMid').val(eqMid);
       mGain.gain.value = ($('#eqMid').val()/100);
     $('.status').html('mid gain: '+eqMid+'%');
-
    }
   });
   $(document).bind('keydown', '5', function() {
@@ -197,7 +188,6 @@ audio.volume = 0;
       $('#eqMid').val(eqMid);
       mGain.gain.value = ($('#eqMid').val()/100);
     $('.status').html('mid gain: '+eqMid+'%');
-
    }
   });
   $(document).bind('keydown', '9', function() {
@@ -208,7 +198,6 @@ audio.volume = 0;
       // lGain.gain.value = ($(this).val()/100);
       hGain.gain.value = ($('#eqHigh').val()/100);
     $('.status').html('high gain: '+eqHigh+'%');
-
    }
   });
   $(document).bind('keydown', '6', function() {
@@ -218,7 +207,6 @@ audio.volume = 0;
       $('#eqHigh').val(eqHigh);
       hGain.gain.value = ($('#eqHigh').val()/100);
     $('.status').html('high gain: '+eqHigh+'%');
-
    }
   });
 //////----END OF AUDIO PLAYER----//////
@@ -248,7 +236,6 @@ $('.qr-click').click(function(){
   $('div.player > :nth-child(1)').css('display', 'block');
   $('div.player > :nth-child(2)').css('display', 'none');
   $('div.player > :nth-child(3)').css('display', 'none');
-
   qrClick = 2;
 }else if(qrClick == 2){
   $('div.player > :nth-child(1)').css('display', 'none');
@@ -259,51 +246,37 @@ $('.qr-click').click(function(){
   }
 });
 //////----END OF EQUALIZER WINDOW----//////
-
-
 //////----EQ----//////
 var gainDb = -50.0;
 var bandSplit = [360,3600];
-
 context = new AudioContext();
 source = context.createMediaElementSource(document.getElementsByTagName('audio')[0]);
-
 var hBand = context.createBiquadFilter();
 hBand.type = "lowshelf";
 hBand.frequency.value = bandSplit[0];
 hBand.gain.value = gainDb;
-
 var hInvert = context.createGain();
 hInvert.gain.value = -1.0;
-
 var mBand = context.createGain();
-
 var lBand = context.createBiquadFilter();
 lBand.type = "highshelf";
 lBand.frequency.value = bandSplit[1];
 lBand.gain.value = gainDb;
-
 var lInvert = context.createGain();
 lInvert.gain.value = -1.0;
-
 source.connect(lBand);
 source.connect(mBand);
 source.connect(hBand);
-
 hBand.connect(hInvert);
 lBand.connect(lInvert);
-
 hInvert.connect(mBand);
 lInvert.connect(mBand);
-
 var lGain = context.createGain();
 var mGain = context.createGain();
 var hGain = context.createGain();
-
 lBand.connect(lGain);
 mBand.connect(mGain);
 hBand.connect(hGain);
-
 var sum = context.createGain();
 lGain.connect(sum);
 mGain.connect(sum);
@@ -311,7 +284,6 @@ hGain.connect(sum);
 sum.connect(context.destination);
 //////----END OF EQ----//////
 //////----CONTROLS----//////
-
 $('#volume').on("input change", function() {
   audio.volume = ($(this).val()/100);
 });
@@ -391,7 +363,6 @@ var restartPlayer = 0;
     // pushPause();
       $('.songstatus').css('width', 100 + '%');
     $('.status').html('offline');
-    
   }
       }
   clearInterval(statId);

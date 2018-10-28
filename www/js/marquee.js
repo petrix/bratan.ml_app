@@ -261,7 +261,6 @@ $('.qr-click').click(function(){
 $('.status').click(function(){
   spinnerHeight = $('.player').height() - 2;
   if(requestWindow == 0){
->>>>>>> ff5ac0119b591dbc413499c95b3063306a9b479c
   $('div.player > :nth-child(1)').css('display', 'none');
   $('div.player > :nth-child(2)').css('display', 'none');
   $('div.player > :nth-child(3)').css('display', 'none');

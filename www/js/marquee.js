@@ -21,7 +21,7 @@ $(document).ready(function () {
 
 //////----AUDIO PLAYER----//////
 var playingMode = false;
-var audio = $('audio')[0];
+audio = $('audio')[0];
 audio.crossOrigin = "anonymous";
 var spinnerHeight = $('#spinner').height();
 function pushPlay(){
@@ -29,7 +29,7 @@ audio.volume = 0;
        audio.load();
       audio.play();
       spinnerHeight = $('#spinner').height();
-      console.log(spinnerHeight);
+      // console.log(0spinnerHeight);
       $('.spinner-outer').css({'animation': 'spin-cw 20s linear infinite'});
       $('.spinnerlogo').css({'background':'url("img/plast_logo_center.png") center center no-repeat','background-size':'cover','transition':'all 1000ms'});
       volumeCtrl = ($('#volume').val()/100);
@@ -88,7 +88,7 @@ audio.volume = 0;
   });
   $(document).bind('keydown', '1', function() {
     spinnerHeight = $('.player').height() - 2;
-    console.log(spinnerHeight);
+    // console.log(spinnerHeight);
   if(eqWindow == 0){
  $('div.player > :nth-child(1)').css('display', 'none');
   $('div.player > :nth-child(2)').css('display', 'flex').height(spinnerHeight);
@@ -246,7 +246,6 @@ $('.qr-click').click(function(){
   $('div.player > :nth-child(2)').css('display', 'none');
   $('div.player > :nth-child(3)').css('display', 'flex').height(spinnerHeight).attr({'href': 'https://play.google.com/store/apps/details?id=com.p3xx.bratan','target':'_blank'});
   $('div.player > :nth-child(4)').css('display', 'none');
-  
   qrWindow = 1;
     eqWindow = 0;
   requestWindow = 0;
@@ -254,10 +253,6 @@ $('.qr-click').click(function(){
  $('div.player > :nth-child(1)').css('display', 'block');
   $('div.player > :nth-child(2)').css('display', 'none');
   $('div.player > :nth-child(3)').css('display', 'none');
-<<<<<<< HEAD
-  qrClick = 2;
-}else if(qrClick == 2){
-=======
   $('div.player > :nth-child(4)').css('display', 'none');
   qrWindow = 0;
   }
@@ -287,7 +282,9 @@ $('.status').click(function(){
 var gainDb = -50.0;
 var bandSplit = [360,3600];
 context = new AudioContext();
-source = context.createMediaElementSource(document.getElementsByTagName('audio')[0]);
+// var audio = $('audio')[0];
+source = context.createMediaElementSource($('audio')[0]);
+//source = context.createMediaElementSource(document.getElementsByTagName('audio')[0]);
 var hBand = context.createBiquadFilter();
 hBand.type = "lowshelf";
 hBand.frequency.value = bandSplit[0];
@@ -322,7 +319,8 @@ sum.connect(context.destination);
 //////----END OF EQ----//////
 //////----CONTROLS----//////
 $('#volume').on("input change", function() {
-  audio.volume = ($(this).val()/100);
+  // audio.volume = ($(this).val()/100);
+  sum.gain.value = ($(this).val()/100);
 });
 $('#eqLow').on("input change", function() {
   lGain.gain.value = ($(this).val()/100);
@@ -394,7 +392,7 @@ var restartPlayer = 0;
     $('.status').html('online');
       $.getJSON('http://radiobratan.tk:88/api/nowplaying', function (data) {
       $('.songstatus').css('width', (data[0].now_playing.elapsed / data[0].now_playing.duration) * 100 + '%');
-      console.log(data[0].now_playing.song.art);
+      // console.log(data[0].now_playing.song.art);
     });
   }else{
     // pushPause();

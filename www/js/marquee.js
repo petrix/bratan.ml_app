@@ -21,12 +21,16 @@ $(document).ready(function () {
 
   //////----AUDIO PLAYER----//////
   var playingMode = false;
-  var audio = $('audio')[0];
+  // var audio = $('audio')[0];
+  // var audio = context.createMediaElementSource($('audio')[0]);
+  // var audio = document.getElementsByTagName('audio')[0].currentSrc;
+  var audio = document.getElementsByTagName('audio')[0];
   console.log(audio);
   // var audio = new AudioContext;
   audio.crossOrigin = "anonymous";
   // audio.allow = "autoplay";
   var spinnerHeight = $('#spinner').height();
+
 
   function pushPlay() {
     audio.volume = 0;
@@ -75,6 +79,8 @@ $(document).ready(function () {
       pushPause();
     }
   });
+
+  //////----END OF AUDIO PLAYER----//////
   $(document).bind('keydown', 'space', function () {
     if (!playingMode) {
       pushPlay();
@@ -237,8 +243,6 @@ $(document).ready(function () {
       $('.status').html('high gain: ' + eqHigh + '%');
     }
   });
-  //////----END OF AUDIO PLAYER----//////
-
   //////----EQUALIZER WINDOW----//////
   $('.fa-cogs').click(function () {
     spinnerHeight = $('.player').height() - 2;
@@ -306,7 +310,8 @@ $(document).ready(function () {
   var bandSplit = [360, 3600];
   var context = new AudioContext();
   // var audio = $('audio')[0];
-  source = context.createMediaElementSource($('audio')[0]);
+  var source = context.createMediaElementSource($('audio')[0]);
+  console.log('source - ' + source);
   //source = context.createMediaElementSource(document.getElementsByTagName('audio')[0]);
   var hBand = context.createBiquadFilter();
   hBand.type = "lowshelf";
@@ -428,7 +433,7 @@ $(document).ready(function () {
     }
   }
   clearInterval(statId);
-  statId = setInterval(statusId, 5000);
+  statId = setInterval(statusId, 3000);
   //////----END OF STATUS----//////
 
   // if(screen.orientation.type == )

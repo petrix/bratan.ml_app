@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HW-8</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css"
+        integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="jquery.location-region-picker.css">
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+
+    <script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
+    <script src="jquery.location-region-picker.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Jura:400,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+
+    <link href="weather-js.css" rel="stylesheet">
+    <script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
+    <script>
+        jQuery(document).ready(function () {
+            $('.location-region-picker').LocationRegionPicker({
+                'google_api_key': 'AIzaSyCuDOES3KAJB0y-wsN40-dYUl7iiKQOYrg',
+                'types': '(regions)'
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Google Location Picker Plugin Demo</h1>
+
+        <input type="text" class="location-region-picker form-control" />
+
+        <div id="map"></div>
+    </div>
+    <!-- <img src="" alt=""> -->
+    <div class="main">
+        <span id="lvivcity">xxx</span>
+        <span id="lvivtime">dasdasdasd</span>
+
+        <span id="lvivtemp">xxx</span>
+        <span id="lvivtempapp">xxx</span>
+    </div>
+    <div class="main">
+
+        <span id="lvivsum"></span>
+    </div>
+
+    <section class="hourly">
+        <span id="sumhr"></span>
+        <article class="sumhr1">
+        </article>
+        <article class="sumhr2">
+        </article>
+    </section>
+
+
+    <div class="main">
+        <span id="sumdaily"></span>
+    </div>
+
+    <div class="daily">
+        <!-- <p id="lvivsumdailydown"></p> -->
+    </div>
+    <script type="text/javascript" src="vendors.js"></script>
+    <script type="text/javascript" src="weather-js.js"></script>
+</body>
+
+</html>

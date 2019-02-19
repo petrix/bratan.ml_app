@@ -25,6 +25,7 @@ $(document).ready(function () {
   // var audio = context.createMediaElementSource($('audio')[0]);
   // var audio = document.getElementsByTagName('audio')[0].currentSrc;
   var audio = document.getElementsByTagName('audio')[0];
+  // var audio = $('.audio');
   console.log(audio);
   // var audio = new AudioContext;
   audio.crossOrigin = "anonymous";
@@ -34,8 +35,10 @@ $(document).ready(function () {
 
   function pushPlay() {
     audio.volume = 0;
-    audio.load();
-    audio.play();
+    $('.audio').trigger('load');
+    $('.audio').trigger('play');
+    // audio.load();
+    // audio.play();
     spinnerHeight = $('#spinner').height();
     // console.log(0spinnerHeight);
     $('.spinner-outer').css({

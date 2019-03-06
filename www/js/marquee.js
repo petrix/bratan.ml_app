@@ -18,18 +18,15 @@ $(document).ready(function () {
   //     'img/BG_2.jpg'
   // ]);
   //////----END OF PRELOAD IMAGES----//////
-
+  var context;
   //////----AUDIO PLAYER----//////
   var playingMode = false;
-  // var audio = $('audio')[0];
-  // var audio = context.createMediaElementSource($('audio')[0]);
-  // var audio = document.getElementsByTagName('audio')[0].currentSrc;
-  var audio = document.getElementsByTagName('audio')[0];
-  // var audio = $('.audio');
+  context = new AudioContext();
+
+  var audio = context.createMediaElementSource($('.audio')[0]);
+  var eqInput = context.createMediaStreamDestination(audio);
   console.log(audio);
-  // var audio = new AudioContext;
   audio.crossOrigin = "anonymous";
-  // audio.allow = "autoplay";
   var spinnerHeight = $('#spinner').height();
 
 
@@ -71,7 +68,9 @@ $(document).ready(function () {
     $(audio).animate({
       volume: 0
     }, 300, function () {
-      audio.pause();
+      // audio.pause();
+      $('.audio').trigger('pause');
+
       playingMode = false;
     });
   }
@@ -308,45 +307,48 @@ $(document).ready(function () {
     }
   });
   //////----END OF EQUALIZER WINDOW----//////
-  //////----EQ----//////
-  var gainDb = -50.0;
-  var bandSplit = [360, 3600];
-  var context = new AudioContext();
-  // var audio = $('audio')[0];
-  var source = context.createMediaElementSource($('audio')[0]);
-  console.log('source - ' + source);
-  //source = context.createMediaElementSource(document.getElementsByTagName('audio')[0]);
-  var hBand = context.createBiquadFilter();
-  hBand.type = "lowshelf";
-  hBand.frequency.value = bandSplit[0];
-  hBand.gain.value = gainDb;
-  var hInvert = context.createGain();
-  hInvert.gain.value = -1.0;
-  var mBand = context.createGain();
-  var lBand = context.createBiquadFilter();
-  lBand.type = "highshelf";
-  lBand.frequency.value = bandSplit[1];
-  lBand.gain.value = gainDb;
-  var lInvert = context.createGain();
-  lInvert.gain.value = -1.0;
-  source.connect(lBand);
-  source.connect(mBand);
-  source.connect(hBand);
-  hBand.connect(hInvert);
-  lBand.connect(lInvert);
-  hInvert.connect(mBand);
-  lInvert.connect(mBand);
-  var lGain = context.createGain();
-  var mGain = context.createGain();
-  var hGain = context.createGain();
-  lBand.connect(lGain);
-  mBand.connect(mGain);
-  hBand.connect(hGain);
-  var sum = context.createGain();
-  lGain.connect(sum);
-  mGain.connect(sum);
-  hGain.connect(sum);
-  sum.connect(context.destination);
+  function equalization() {
+    //////----EQ----//////
+    var gainDb = -50.0;
+    var bandSplit = [360, 3600];
+    // var context = new AudioContext();
+    // var audio = $('audio')[0];
+    // var source = context.createMediaElementSource($('audio')[0]);
+    console.log('source - ' + eqInput);
+    //source = context.createMediaElementSource(document.getElementsByTagName('audio')[0]);
+    var hBand = context.createBiquadFilter();
+    hBand.type = "lowshelf";
+    hBand.frequency.value = bandSplit[0];
+    hBand.gain.value = gainDb;
+    var hInvert = context.createGain();
+    hInvert.gain.value = -1.0;
+    var mBand = context.createGain();
+    var lBand = context.createBiquadFilter();
+    lBand.type = "highshelf";
+    lBand.frequency.value = bandSplit[1];
+    lBand.gain.value = gainDb;
+    var lInvert = context.createGain();
+    lInvert.gain.value = -1.0;
+    eqInput.connect(lBand);
+    eqInput.connect(mBand);
+    eqInput.connect(hBand);
+    hBand.connect(hInvert);
+    lBand.connect(lInvert);
+    hInvert.connect(mBand);
+    lInvert.connect(mBand);
+    var lGain = context.createGain();
+    var mGain = context.createGain();
+    var hGain = context.createGain();
+    lBand.connect(lGain);
+    mBand.connect(mGain);
+    hBand.connect(hGain);
+    var sum = context.createGain();
+    lGain.connect(sum);
+    mGain.connect(sum);
+    hGain.connect(sum);
+    sum.connect(context.destination);
+  }
+  equalization();
   //////----END OF EQ----//////
   //////----CONTROLS----//////
   $('#volume').on("input change", function () {
